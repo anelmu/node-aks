@@ -10,7 +10,8 @@ app.get('/pods', async (req, res) => {
     const k8sApi = kc.makeApiClient(k8s.CoreV1Api);
 
     const response = await k8sApi.listNamespacedPod({ namespace: 'default' });
-    res.json(response.body);
+    console.log('Pods:', response);
+    res.json(response);
   }
   catch (error) {
     console.error('Error fetching pods:', error);
