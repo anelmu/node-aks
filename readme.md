@@ -11,5 +11,5 @@ docker run -p 3000:3000 node-aks-app
 ## API Endpoints
 
 - **List Pods**  
-  `GET /pods`  
+  `GET localhost:3000/pods`  
   Returns a list of Kubernetes pods.
